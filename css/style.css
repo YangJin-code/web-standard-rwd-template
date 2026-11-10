@@ -78,7 +78,7 @@ header nav ul {
 .hero .inner{
     display: flex;
     align-items: center;
-    
+    row-gap:16px;
 
 }
 .sub{
@@ -125,12 +125,76 @@ main section{
     margin-right: 4rem;
     border-radius: 1.6rem;
     display: flex;
-    justify-content: space-between;
+    
 
 }
 .tags{
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    text-align: center;
+    align-items: center;
+    
+}
+.tags li{
+    background-color: #FFD7D7;
+    color: #C52A2A;
+    padding: 6px 12px;
+    border-radius: 3rem
+
+}
+.avatar{
+    font-size: 52px;
+    background-color: #FFD7D7;
+    align-items: center;
+    text-align: center;
+    width: 96px;
+    height: 96px;
+    line-height: 90px;
+    border-radius: 9rem;
+    
+
+}
+.intro{
+    width: auto;
+    margin-left: 24px;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    
+}
+.intro h3{
+    color: #1E1B4B;
+    font-size: 24px;
+
+}
+.intro p{
+    font-size: 16px;
+    
+
+}
+.info{
+    justify-content: space-between; 
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+
+}
+
+.info h3{
+    font-size: 24px;
+
+}
+.cate{
+    font-size: 13px;
+    color: #ff5c5c;
+}
+.more{
+    color: #ff5c5c;
+}
+#posts h2{
+    font-size: 30px;
+    margin-bottom: 24px;
 }
 .post{
     padding:  4rem;
@@ -138,6 +202,8 @@ main section{
     display: flex;
     align-items: center;
     border-radius: 1.6rem;
+    gap:50px ;
+    
 }
 .post:nth-last-of-type(2){
     flex-direction: row-reverse;
