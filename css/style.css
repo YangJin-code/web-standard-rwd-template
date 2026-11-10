@@ -21,6 +21,7 @@ body {
     font-family: "Noto Sans KR", sans-serif;
     color: #333333;
     background-color: #F2F2F2;
+    height: auto;
 }
 
 h1,
@@ -29,16 +30,146 @@ h3 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: normal;
 }
+.inner,
+main{
+    max-width: 120rem;
+    margin: auto;
+    height: 100%;
+}
 
 header{
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    /* margin: 0 auto; */
+    background-color: #161141;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 0;
+    color: aliceblue;
 }
+header .inner{
+    display: flex;
+    max-width: 120rem;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
 
 header nav ul {
   display: flex;
-  gap: 10px;
+  gap: 2.8rem;
 
+}
+.hero{
+    height: 52rem;
+    background-color: black;
+    background: url("../images/theater.jpg") center 48% / cover no-repeat;
+    padding: 4rem;
+}
+
+.hero .inner{
+    display: flex;
+    align-items: center;
+    
+
+}
+.sub{
+    color: #FFA800;
+    letter-spacing: 6px;
+    font-size: 13px;
+
+}
+.hero-txt{
+    color:white;
+    font-size: 16px;
+    
+    
+    
+}
+.hero-txt h2{
+    font-size: 52px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    
+}
+
+.inttxt{
+    margin-bottom:32px ;
+}
+.btn{
+    padding: 12px 28px;
+    background-color: #C52A2A;
+    border-radius: 3rem;
+    
+}
+main section{
+    
+    padding: 4rem;
+    border-radius: 1.6rem;
+
+}
+.profile{
+    background-color: white;
+    margin-top: -3.7em;
+    margin-bottom: 6rem;
+    padding:  4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-radius: 1.6rem;
+
+}
+.post{
+    padding:  4rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 1.6rem;
+}
+.post:nth-last-of-type(2){
+    flex-direction: row-reverse;
+    margin: 2,4rem 0;
+
+}
+#photos{
+    margin-top: 6rem;
+  
+}
+.photos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 10rem 10rem;
+    gap:1rem;
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p5 p3";
+}
+.p1{
+    grid-area:p1;
+}
+.p2{
+    grid-area:p2;
+}
+.p3{
+    grid-area:p3;
+}
+.p4{
+    grid-area:p4;
+}
+.p5{
+    grid-area:p5;
+}
+.photos li{
+    background-color: #333333;
+    border-radius: 1.2rem;
+}
+footer{
+    background-color: black;
+    margin-top: 8rem;
+    padding: 3rem;
 }
