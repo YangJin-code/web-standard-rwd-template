@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -37,6 +38,41 @@ main{
     height: 100%;
 }
 
+#wrap {
+    height: 100vh;
+    background-color: #eee;
+
+}
+.fixedTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FF5C5C;
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all .3s;
+    font-size: 13px;
+    z-index: 9999; 
+}
+#wrap.scroll .fixedTop {
+    
+    opacity: 1;
+    transform: translateY(0);
+}
+#wrap.scroll header {
+    background-color: #1611419f;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #161141;
+    box-shadow: 0 5px 5px #00000011;
+}
 header{
     position: fixed;
     top: 0;
@@ -177,7 +213,8 @@ main section{
     justify-content: space-between; 
     display: flex;
     flex-direction: column;
-    height: 220px;
+    height: 250px;
+   
 
 }
 
@@ -185,12 +222,23 @@ main section{
     font-size: 24px;
 
 }
+.info p:nth-of-type(2) {
+    font-size: 16px;
+}
 .cate{
     font-size: 13px;
     color: #ff5c5c;
 }
 .more{
     color: #ff5c5c;
+    font-size: 16px;
+}
+.date{
+    background-color: #FFD45C;
+    padding: 4px 10px;
+    border-radius: 1.6rem;
+    font-size: 13px;
+    font-weight: bold;
 }
 #posts h2{
     font-size: 30px;
@@ -202,7 +250,7 @@ main section{
     display: flex;
     align-items: center;
     border-radius: 1.6rem;
-    gap:50px ;
+    gap:20px ;
     
 }
 .post:nth-last-of-type(2){
@@ -231,6 +279,7 @@ main section{
     left: 0;
     transition: all .3s;
     transform: scale(1);
+    
 }
 .thumb .date {
     position: relative;
@@ -244,7 +293,7 @@ main section{
     background-image: url(../images/interstellar.jpg);
 }
 .post:nth-of-type(3) .thumb .bg{
-    background-image: url(../images/gravity.jpg);
+    background-image: url(../images/graspace.jpg);
 }
 
 .post:hover .thumb .bg{
@@ -261,24 +310,127 @@ main section{
     gap:1rem;
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p5 p3";
 }
+.photos p{
+    margin: 10px;
+    color: white;
+    font-size: 16px;
+    z-index: 9; 
+    position: relative;
+}
+.photos li:hover::before {
+    transform: scale(1.05);
+}
 .p1{
     grid-area:p1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background:url("../images/farm.jpg") center  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
 }
+.p1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/farm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
 .p2{
     grid-area:p2;
-    
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background:url("../images/mars.jpg") center  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.p2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/mars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
 .p3{
     grid-area:p3;
-    
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background:url("../images/gravity.jpg") center  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.p3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/gravity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
 .p4{
     grid-area:p4;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background:url("../images/space.jpg") center  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.p4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
 .p5{
     grid-area:p5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background:url("../images/cornfield.jpg") center  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.p5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/cornfield.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+    transform: scale(1);
+}
+
 .photos li{
     background-color: #333333;
     border-radius: 1.2rem;
