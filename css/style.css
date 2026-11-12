@@ -240,12 +240,168 @@ main section{
     font-size: 13px;
     font-weight: bold;
 }
+/* ===== 별 보기 가이드 (탭) ===== */
+.guide-tabs {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.guide-tabs button {
+    padding: 1rem 2.4rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: #ffffff;
+    color: #5b4bd6;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.guide-tabs li.on button {
+    background-color: #FF4848;
+    color: #ffffff;
+}
+
+.guide-content {
+    display: flex;
+    gap: 1.6rem;
+    height: 30rem;
+}
+
+.guide-content li {
+    position: relative;
+    flex: 1;
+    /* 기본은 4장이 같은 폭 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+    background-color: #FFDADA;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.4s, background-color 0.4s;
+}
+
+.guide-content .num {
+    position: absolute;
+    top: 2rem;
+    right: 2.4rem;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 3.2rem;
+    color: #c7c2ff;
+}
+
+.guide-content .badge {
+    position: absolute;
+    top: 2rem;
+    left: 2.4rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    background-color: #ffd45c;
+    color: #FF4848;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    /* 평소엔 숨김 */
+    transform: translateY(-1rem);
+    transition: 0.4s;
+}
+
+.guide-content .thumb {
+    width: auto;
+    height: auto;
+    background: none;
+    font-size: 6.4rem;
+    opacity: 0;
+    /* 평소엔 숨김 */
+    transform: scale(0.6);
+    transition: 0.4s;
+}
+
+.guide-content h3 {
+    font-size: 2.4rem;
+    color: #1e1b4b;
+}
+
+.guide-content p {
+    font-size: 1.4rem;
+    color: #5b4bd6;
+}
+
+/* 선택된 카드 (클래스 바인딩) */
+.guide-content li.on {
+    flex: 2.2;
+    /* 가로 폭 넓어짐 */
+    background-color: #FF4848;
+}
+
+.guide-content li.on .badge,
+.guide-content li.on .thumb {
+    opacity: 1;
+    transform: none;
+}
+
+.guide-content li.on h3 {
+    color: #ffffff;
+}
+
+.guide-content li.on p {
+    color: white;
+}
+
+.guide-content li.on .num {
+    color: #ffd45c;
+}
+
+/* 모바일에서는 세로로 쌓기 (768px 미디어쿼리 안에 넣어도 돼요) */
+@media (max-width: 768px) {
+    .guide-tabs {
+        overflow-x: auto;
+        /* 탭은 옆으로 밀기 */
+    }
+
+    .guide-tabs button {
+        white-space: nowrap;
+    }
+
+    .guide-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .guide-content li {
+        flex: none;
+        min-height: 9rem;
+    }
+
+    .guide-content li.on {
+        min-height: 24rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== 5. 사진첩 ===== */
 #posts h2{
     font-size: 30px;
     margin-bottom: 24px;
 }
 .post{
     padding:  4rem;
+    margin-bottom: 1rem;
     background-color: white;
     display: flex;
     align-items: center;
