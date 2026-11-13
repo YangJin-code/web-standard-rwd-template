@@ -93,9 +93,7 @@
 }
 
 @media screen and (max-width:768px) {
-    .hero{
-        margin-top: 10rem;
-    }
+
     .inner,main {
         padding: 0 2rem;
     }
@@ -148,7 +146,7 @@
         opacity: 0;
     }
 
-    nav ul {
+    header nav ul{
         flex-direction: column;
         gap: 0;
         align-items: center;

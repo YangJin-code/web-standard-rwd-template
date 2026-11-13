@@ -43,7 +43,7 @@ main{
     background-color: #FF5C5C;
 
 }
-.fixedTop {
+/* .fixedTop {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -66,7 +66,7 @@ main{
     
     opacity: 1;
     transform: translateY(0);
-}
+} */
 #wrap.scroll header {
     background-color: #1611419f;
     backdrop-filter: blur(5px);
@@ -363,10 +363,32 @@ main section{
     color: #ffd45c;
 }
 
+
 /* 모바일에서는 세로로 쌓기 (768px 미디어쿼리 안에 넣어도 돼요) */
+@media (max-width: 768px) {
+    .guide-tabs {
+        overflow-x: auto;
+        /* 탭은 옆으로 밀기 */
+    }
 
+    .guide-tabs button {
+        white-space: nowrap;
+    }
 
+    .guide-content {
+        flex-direction: column;
+        height: auto;
+    }
 
+    .guide-content li {
+        flex: none;
+        min-height: 9rem;
+    }
+
+    .guide-content li.on {
+        min-height: 24rem;
+    }
+}
 
 
 
@@ -579,36 +601,47 @@ main section{
     border-radius: 1.2rem;
 }
 footer{
-    background-color: black;
+    /* background-color: black;
     margin-top: 8rem;
     padding: 3rem;
     color: white;
     text-align: center;
-    
+     */    
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 8rem;
+    padding: 3rem 4rem;
+    background-color: #1e1b4b;
+    color: #c7c2ff;
+    font-size: 1.3rem;
     
 }
+.top {
+    position: fixed;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #FF5C5C;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: 0.3s;
+}
 
-@media (max-width: 768px) {
-    .guide-tabs {
-        overflow-x: auto;
-        
-    }
+body.scroll .top {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .guide-tabs button {
-        white-space: nowrap;
-    }
-
-    .guide-content {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .guide-content li {
-        flex: none;
-        min-height: 9rem;
-    }
-
-    .guide-content li.on {
-        min-height: 24rem;
-    }
+.mob-nav-btn {
+    display: none;
 }
