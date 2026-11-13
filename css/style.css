@@ -39,8 +39,8 @@ main{
 }
 
 #wrap {
-    height: 100vh;
-    background-color: #eee;
+    /* height: 100vh; */
+    background-color: #FF5C5C;
 
 }
 .fixedTop {
@@ -240,6 +240,11 @@ main section{
     font-size: 13px;
     font-weight: bold;
 }
+#guides h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+
+}
 /* ===== 별 보기 가이드 (탭) ===== */
 .guide-tabs {
     display: flex;
@@ -281,7 +286,7 @@ main section{
     gap: 1.2rem;
     padding: 2.4rem;
     border-radius: 1.6rem;
-    background-color: #FFDADA;
+    background-color: #fae8e8;
     overflow: hidden;
     cursor: pointer;
     transition: flex 0.4s, background-color 0.4s;
@@ -359,30 +364,6 @@ main section{
 }
 
 /* 모바일에서는 세로로 쌓기 (768px 미디어쿼리 안에 넣어도 돼요) */
-@media (max-width: 768px) {
-    .guide-tabs {
-        overflow-x: auto;
-        /* 탭은 옆으로 밀기 */
-    }
-
-    .guide-tabs button {
-        white-space: nowrap;
-    }
-
-    .guide-content {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .guide-content li {
-        flex: none;
-        min-height: 9rem;
-    }
-
-    .guide-content li.on {
-        min-height: 24rem;
-    }
-}
 
 
 
@@ -457,6 +438,12 @@ main section{
 }
 #photos{
     margin-top: 6rem;
+  
+}
+#photos h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+   
   
 }
 .photos{
@@ -595,4 +582,33 @@ footer{
     background-color: black;
     margin-top: 8rem;
     padding: 3rem;
+    color: white;
+    text-align: center;
+    
+    
 }
+
+/* @media (max-width: 768px) {
+    .guide-tabs {
+        overflow-x: auto;
+        
+    }
+
+    .guide-tabs button {
+        white-space: nowrap;
+    }
+
+    .guide-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .guide-content li {
+        flex: none;
+        min-height: 9rem;
+    }
+
+    .guide-content li.on {
+        min-height: 24rem;
+    }
+} */
