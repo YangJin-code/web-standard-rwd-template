@@ -588,7 +588,7 @@ footer{
     
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .guide-tabs {
         overflow-x: auto;
         
@@ -611,4 +611,4 @@ footer{
     .guide-content li.on {
         min-height: 24rem;
     }
-} */
+}
