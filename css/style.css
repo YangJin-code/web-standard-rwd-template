@@ -365,11 +365,11 @@ main section{
 
 
 /* 모바일에서는 세로로 쌓기 (768px 미디어쿼리 안에 넣어도 돼요) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .guide-tabs {
-        overflow-x: auto;
+        overflow-x: auto; */
         /* 탭은 옆으로 밀기 */
-    }
+    /* }
 
     .guide-tabs button {
         white-space: nowrap;
@@ -390,7 +390,7 @@ main section{
     }
 }
 
-
+ */
 
 
 
