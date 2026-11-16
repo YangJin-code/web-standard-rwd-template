@@ -280,7 +280,7 @@
 
     /* 열린 카드: 배지 + 번호 + 아이콘 + 제목 + 설명 */
     .guide-content li.on {
-        min-height: 22rem;
+        min-height: 27rem;
     }
 
     .guide-content li.on .num {
