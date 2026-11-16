@@ -320,4 +320,9 @@
         gap: 0.4rem;
         text-align: center;
     }
+
+    .heroSwiper .swiper-button-prev,
+    .heroSwiper .swiper-button-next {
+        display: none;
+    }
 }

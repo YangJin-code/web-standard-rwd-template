@@ -36,6 +36,8 @@ main{
     max-width: 120rem;
     margin: auto;
     height: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 #wrap {
@@ -95,6 +97,7 @@ header .inner{
     justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
+    
 
 }
 
@@ -105,13 +108,162 @@ header nav ul {
 
 }
 .hero{
-    height: 52rem;
+    /* height: 52rem;
     background-color: black;
     background: url("../images/theater.jpg") center 48% / cover no-repeat;
-    padding: 4rem;
+    padding: 4rem; */
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: #17132e;
+}
+/* 슬라이더 전체 */
+.heroSwiper {
+    width: 100%;
+    height: 100%;
 }
 
-.hero .inner{
+/* 배경 이미지 */
+.hero-slide > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+/* 이미지 어둡게 처리 */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(9, 7, 29, 0.7),
+        rgba(9, 7, 29, 0.25)
+    );
+
+    z-index: 1;
+}
+
+/* 내부 콘텐츠 영역 */
+.hero-slide .inner {
+    width: 1100px;
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* 텍스트 영역 */
+.hero-txt {
+    width: 480px;
+    color: white;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* 좌측 정렬 */
+.hero-slide.align-left .inner {
+    justify-content: flex-start;
+}
+
+.hero-slide.align-left .hero-txt {
+    text-align: left;
+}
+/* 중앙 정렬 */
+.hero-slide.align-center .inner {
+    justify-content: center;
+}
+
+.hero-slide.align-center .hero-txt {
+    text-align: center;
+}
+
+/* 우측 정렬 */
+.hero-slide.align-right .inner {
+    justify-content: flex-end;
+}
+
+.hero-slide.align-right .hero-txt {
+    text-align: right;
+}
+
+/* 소개 문구 */
+.hero-txt .sub {
+    color: #e9bd54;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero-txt h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-txt .inttxt {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* 버튼 */
+.hero-txt .btn {
+    display: inline-block;
+    padding: 11px 23px;
+
+    background: #ff777d;
+    color: white;
+
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.hero-txt .btn:hover {
+    background: #e94f64;
+    transform: translateY(-4px);
+}
+
+/* 페이지네이션 */
+.heroSwiper .swiper-pagination {
+    /* bottom: 20px; */
+    bottom: 50px !important;
+}
+
+.heroSwiper .swiper-pagination-bullet {
+    background: white;
+    opacity: .5;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffd34e;
+}
+
+/* 좌우 화살표 */
+.heroSwiper .swiper-button-prev,
+.heroSwiper .swiper-button-next {
+    color: white;
+}
+
+/* .hero .inner{
     display: flex;
     align-items: center;
     row-gap:16px;
@@ -145,7 +297,7 @@ header nav ul {
     background-color: #C52A2A;
     border-radius: 3rem;
     
-}
+} */
 main section{
     
     padding: 4rem;
