@@ -93,15 +93,41 @@
 }
 
 @media screen and (max-width:768px) {
+    
+    /* 좌측 정렬 */
+    .hero-slide.align-left .inner {
+        justify-content: center;
+    }
+
+    .hero-slide.align-left .hero-txt {
+        text-align: center;
+    }
+    /* 중앙 정렬 */
+    .hero-slide.align-center .inner {
+        justify-content: center;
+    }
+
+    .hero-slide.align-center .hero-txt {
+        text-align: center;
+    }
+
+    /* 우측 정렬 */
+    .hero-slide.align-right .inner {
+        justify-content: center;
+    }
+
+    .hero-slide.align-right .hero-txt {
+        text-align: center;
+    }
 
     .inner,main {
         padding: 0 2rem;
     }
     header{
-        padding:1.1rem 0
+        padding:1.6rem 0
     }
     .logo {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
     .mob-nav-btn {
         display: block;
@@ -199,6 +225,7 @@
         text-align: center;
     }
 
+
     .hero-txt {
         align-items: center;
     }
@@ -211,16 +238,25 @@
         flex-direction: column;
         gap: 1.2rem;
         margin-top: -4rem;
-        padding: 2.4rem 2rem;
+        padding: 1rem 1rem;
         text-align: center;
-        /* margin-left: 2rem;
-        margin-right: 2rem; */
+        margin-left: 0rem;
+        margin-right: 0rem;
         align-items: center;
         /* justify-content: center; */
         /* text-align: center; */
     }
+    .intro h3{
+        font-size: 20px;
 
-       
+    }
+    .intro p{
+        font-size: 10px;
+    }
+
+    .hero .inttxt{
+        font-size: 10px;
+    }   
         
 
     .intro {
@@ -238,6 +274,9 @@
         flex-direction: column;
         align-items: stretch;
         gap: 1.6rem;
+    }
+    .post{
+        padding: 1rem;
     }
 
     .thumb {
