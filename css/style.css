@@ -23,6 +23,7 @@ body {
     color: #333333;
     background-color: #F2F2F2;
     height: auto;
+    overflow-x: hidden;
 }
 
 h1,

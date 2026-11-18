@@ -220,3 +220,8 @@ const heroSwiper = new Swiper(".heroSwiper", {
     },
 
 });
+
+
+    AOS.init({
+         duration: 1000, 
+    });
