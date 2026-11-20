@@ -5,9 +5,13 @@
 
 실행방법
 A.Actions 로 들어가 링크 https://yangjin-code.github.io/web-standard-rwd-template/ 로 들어간다
+
 B. 파일을 다운로드한 후에 직접 실행한다.
 
+
 핵심코드
+
+
 .top {
     position: fixed;
     right: 2.4rem;
@@ -27,4 +31,5 @@ B. 파일을 다운로드한 후에 직접 실행한다.
     transform: translateY(3rem);
     transition: 0.3s;
 }
+
 누를 경우 페이지 위로 이동한다.
