@@ -6,7 +6,7 @@
 
 실행방법
 
-A.Actions 로 들어가 링크 https://yangjin-code.github.io/web-standard-rwd-template/ 로 들어간다
+A. Actions 로 들어가 링크 https://yangjin-code.github.io/web-standard-rwd-template/ 로 들어간다
 
 B. 파일을 다운로드한 후에 직접 실행한다.
 
